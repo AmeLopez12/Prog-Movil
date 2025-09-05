@@ -20,5 +20,5 @@
     <string name="bill_amount">Cuenta</string>
     <string name="how_was_the_service">Porcentaje de Propina</string>
     <string name="round_up_tip">Redondear la Propina?</string>
-    <string name="tip_amount">Importe de propina: %s</string>
+    <string name="tip_amount">Importe de Propina: %s</string>
 </resources>
