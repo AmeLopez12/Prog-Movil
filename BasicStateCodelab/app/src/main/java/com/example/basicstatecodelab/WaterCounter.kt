@@ -10,12 +10,12 @@ import androidx.compose.foundation.layout.Column
 //import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
-//import androidx.compose.runtime.remember
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.saveable.rememberSaveable
+//import androidx.compose.runtime.saveable.rememberSaveable
 //import androidx.compose.foundation.layout.Row
 
-@Composable
+/*@Composable
 fun WaterCounter(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(16.dp)) {
         var count by rememberSaveable { mutableStateOf(0) }
@@ -26,4 +26,24 @@ fun WaterCounter(modifier: Modifier = Modifier) {
             Text("Agrega uno")
         }
     }
+}*/
+
+@Composable
+fun StatelessCounter(count: Int, onIncrement: () -> Unit, modifier: Modifier = Modifier) {
+    Column(modifier = modifier.padding(16.dp)) {
+        if (count > 0) {
+            Text("Has tomado $count vasos.")
+        }
+        Button(onClick = onIncrement, Modifier.padding(top = 8.dp), enabled = count < 10) {
+            Text("Agrega uno")
+        }
+    }
+}
+
+@Composable
+fun StatefulCounter() {
+    var count by remember { mutableStateOf(0) }
+
+    StatelessCounter(count, { count++ })
+    //AnotherStatelessMethod(count, { count *= 2 })
 }
