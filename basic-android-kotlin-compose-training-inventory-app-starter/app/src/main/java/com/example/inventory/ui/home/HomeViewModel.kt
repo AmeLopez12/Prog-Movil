@@ -41,7 +41,6 @@ class HomeViewModel(itemsRepository: ItemsRepository) : ViewModel() {
             )
 }
 
-
 /**
  * Ui State for HomeScreen
  */
