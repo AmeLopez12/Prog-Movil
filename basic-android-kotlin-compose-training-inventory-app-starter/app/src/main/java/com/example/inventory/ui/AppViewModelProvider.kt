@@ -47,19 +47,16 @@ object AppViewModelProvider {
         // Initializer for ItemDetailsViewModel
         initializer {
             ItemDetailsViewModel(
-                this.createSavedStateHandle(),
-                inventoryApplication().container.itemsRepository
+                this.createSavedStateHandle()
             )
         }
 
         // Initializer for HomeViewModel
         initializer {
-            HomeViewModel(
-                inventoryApplication().container.itemsRepository)
+            HomeViewModel()
         }
     }
 }
-
 
 /**
  * Extension function to queries for [Application] object and returns an instance of
