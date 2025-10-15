@@ -21,13 +21,26 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.reply.data.Email
 import com.example.reply.data.MailboxType
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 
 @Composable
 fun ReplyApp(
-    modifier: Modifier = Modifier,
+    windowSize: WindowWidthSizeClass,
+    modifier: Modifier = Modifier
 ) {
     val viewModel: ReplyViewModel = viewModel()
     val replyUiState = viewModel.uiState.collectAsState().value
+
+    when (windowSize) {
+        WindowWidthSizeClass.Compact -> {
+        }
+        WindowWidthSizeClass.Medium -> {
+        }
+        WindowWidthSizeClass.Expanded -> {
+        }
+        else -> {
+        }
+    }
 
     ReplyHomeScreen(
         replyUiState = replyUiState,
