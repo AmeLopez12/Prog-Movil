@@ -104,6 +104,7 @@ fun HomeScreen(
             onItemClick = navigateToItemUpdate,
             modifier = modifier.fillMaxSize(),
             contentPadding = innerPadding,
+
         )
     }
 }
