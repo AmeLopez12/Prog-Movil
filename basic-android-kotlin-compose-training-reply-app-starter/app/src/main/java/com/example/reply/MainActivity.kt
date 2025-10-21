@@ -61,8 +61,28 @@ fun ReplyAppCompactPreview() {
     ReplyTheme {
         Surface {
             ReplyApp(
-                windowSize = WindowWidthSizeClass.Compact,
+                windowSize = WindowWidthSizeClass.Compact
             )
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 700)
+@Composable
+fun ReplyAppMediumPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Medium)
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 1000)
+@Composable
+fun ReplyAppExpandedPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp(windowSize = WindowWidthSizeClass.Expanded)
         }
     }
 }
